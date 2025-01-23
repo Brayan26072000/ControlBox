@@ -1,0 +1,151 @@
+/* Contenedor general */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #52be80, #a9dfbf); /* Fondo con gradiente */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Suavizado de animaciones */
+}
+
+/* Título del formulario */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4CAF50;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Estilo de los inputs y etiquetas */
+.input-group {
+    position: relative;
+    margin-bottom: 30px; /* Mayor espacio entre los campos */
+}
+
+.form-container input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.form-container input:focus {
+    background-color: #fff;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Etiquetas flotantes para los inputs */
+.form-container input:focus + label,
+.form-container input:not(:placeholder-shown) + label {
+    transform: translateY(-30px);
+    font-size: 12px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.form-container label {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    transform: translateY(0);
+}
+
+/* Estilo para el botón de submit */
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.form-container input[type="submit"]:active {
+    background-color: #388e3c;
+    transform: translateY(1px);
+}
+
+/* Estilo para el mensaje de enlace */
+.form-container p {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-container .link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-container .link:hover {
+    text-decoration: underline;
+}
+
+/* Animación de entrada al cargar la página */
+.form-container {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Definimos la animación de deslizamiento */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mensaje de error */
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Ajuste para el nuevo campo de Nombre de Usuario */
+.input-group #username {
+    padding: 14px;
+}
+
+.form-container label[for="username"] {
+    color: #aaa;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}

@@ -1,0 +1,321 @@
+/* Paleta de colores */
+:root {
+  --primary-color: #17202a;
+  --secondary-color: #28a745;
+  --accent-color: #ffc107;
+  --background-color: #d6dbdf;
+  --card-background: white;
+  --border-color: #ddd;
+  --hover-color: #0056b3;
+  --text-color: #6c757d;
+  --light-text-color: #6c757d;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Encabezado de bienvenida */
+h1 {
+  font-size: 2.5rem; /* Tamaño más grande para destacar */
+  color: var(--primary-color);
+  margin: 20px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Botón de cerrar sesión */
+.logout-button {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 100rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Lista de libros: 3 columnas */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 30px;
+  margin: 40px 0;
+}
+
+/* Hacer que la lista de libros sea responsive */
+@media (max-width: 900px) {
+  .book-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 600px) {
+  .book-list {
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+  }
+}
+
+/* Estilo para los elementos de la lista de libros */
+.book-item {
+  text-align: center;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--card-background);
+  box-shadow: 0 6px 12px var(--shadow-color);
+  transition: transform 0.3s, background-color 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.book-item:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: translateY(-8px);
+}
+
+.book-item:hover .book-image {
+  transform: scale(1.1);
+}
+
+.book-item h3,
+.book-item p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.book-item h3 {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.book-item p {
+  margin-top: 5px;
+  color: var(--light-text-color);
+  font-size: 0.9rem;
+}
+
+/* Imagen del libro */
+.book-image {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Estilo de imagen en la vista de detalles */
+.details-left img {
+  width: 50%;
+  max-width: 220px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: block; /* Esto permite que se aplique el centrado */
+  margin-left: auto; /* Esto centra la imagen horizontalmente */
+  margin-right: auto; /* Esto centra la imagen horizontalmente */
+}
+
+/* Detalles del libro en la vista de detalles */
+.book-details {
+  display:block;
+  justify-content:center;
+  text-align: justify;
+  align-items:flex-start;
+  gap: 2px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--card-background);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+/* Estilo de imagen en la vista de detalles */
+.details-left img {
+  width: 50%;
+  max-width: 220px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Estilo del lado derecho de los detalles */
+.details-right {
+  flex: 1;
+  padding-left: 10px; /* Reducir el espacio izquierdo */
+  padding-right: 50px; /* Agregar espacio a la derecha para balancear */
+  border-left: 1px solid var(--border-color);
+}
+
+.review-list ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.review-list li {
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.review-list p {
+  margin: 0;
+  color: var(--light-text-color);
+}
+
+.review-list strong {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+
+/* Reseñas */
+.review-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.review-list li {
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.review-list p {
+  margin: 0;
+  color: var(--light-text-color);
+}
+
+.review-list strong {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Formulario de reseña */
+.review-form {
+  margin-top: 30px;
+  text-align: left; /* Alinear formulario de reseñas a la izquierda */
+}
+
+.review-form input,
+.review-form textarea,
+.review-form button {
+  width: 50%;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.review-form input,
+.review-form textarea {
+  background-color: #f9f9f9;
+}
+
+.review-form textarea {
+  resize: none; /* Impide que el textarea se pueda redimensionar */
+}
+
+.review-form button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.review-form button:hover {
+  background-color: var(--hover-color);
+}
+
+
+.review-form button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Estilos del formulario de búsqueda */
+input[type="text"] {
+  text-align: left;
+  width: 70%;
+  padding: 10px;
+  margin: 20px 0;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Estilos para la sección de contacto */
+.contact-section {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-section .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-info .contact-item i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.contact-info .contact-item p {
+  font-size: 1rem;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info .contact-item {
+    justify-content: center;
+  }
+}
