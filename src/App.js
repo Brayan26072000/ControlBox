@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate, useLocation } from 'react-router-dom';
+import {Route, Routes, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
 import LoginSignup from './LoginSignup';
 import { FaEnvelope, FaWhatsapp, FaUser } from 'react-icons/fa';  // Agregar los íconos de FontAwesome
