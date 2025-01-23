@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Aplicación de reseñas de libros 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta es una aplicación web que permite a los usuarios navegar, buscar y dejar reseñas sobre libros. Los usuarios pueden registrarse, iniciar sesión y disfrutar de una experiencia personalizada. La aplicación está implementada en Netlify con un pipeline de CI/CD configurado.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Descripción
 
-### `npm start`
+La aplicación de reseñas de libros incluye las siguientes características principales:
+- **Explorar libros:** Los usuarios pueden navegar por una lista de libros y buscar por título, autor o categoría.
+- **Filtrar libros:** Los usuarios pueden filtrar los libros por categoría para encontrar fácilmente lo que buscan.
+- **Detalles de libros:** Cada libro muestra información detallada como título, autor, categoría y un resumen.
+- **Reseñas:** Los usuarios autenticados pueden:
+  - Dejar calificaciones del 1 al 5, junto con comentarios en texto.
+  - Ver, editar y eliminar sus propias reseñas.
+- **Autenticación:** Los usuarios pueden registrarse, iniciar sesión y cerrar sesión. Solo los usuarios autenticados pueden dejar reseñas.
+- **Accesibilidad y diseño responsivo:** La aplicación se adapta a cualquier dispositivo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requisitos previos
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Antes de ejecutar la aplicación localmente, asegúrate de tener instalado lo siguiente:
+```bash
+- Node.js (versión 16.0.0 o superior)
+- Git
+- Un editor de texto como Visual Studio Code
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Ejecución local
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Clona el repositorio desde GitHub:
+    git clone https://github.com/tu-usuario/tu-repositorio.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Navega al directorio del proyecto:
+   cd tu-repositorio
 
-### `npm run eject`
+- Instala las dependencias del proyecto:
+   npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Ejecuta la aplicación en modo de desarrollo:
+   npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Abre tu navegador en:
+   http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Implementación en Netlify
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Ve a Netlify e inicia sesión:
+   https://www.netlify.com/
 
-## Learn More
+- Haz clic en:
+   New site from Git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Selecciona tu repositorio desde GitHub.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Configura los ajustes de construcción:
+   Comando de construcción: npm run build
+   Directorio de publicación: build
 
-### Code Splitting
+- Haz clic en:
+   Deploy site
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Una vez finalizado, Netlify te proporcionará una URL pública donde tu aplicación estará en línea.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## CI/CD
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+La implementación en Netlify está configurada con un pipeline de CI/CD. Esto significa que cada vez que realices un cambio en el repositorio de GitHub, Netlify reconstruirá e implementará automáticamente la aplicación.
